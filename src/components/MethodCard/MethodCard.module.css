@@ -1,0 +1,39 @@
+.methodCard {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    width: 240px;
+}
+
+.methodCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.methodContent {
+    padding: 24px;
+    text-align: center;
+}
+
+.methodIconWrapper {
+    margin-bottom: 16px;
+}
+
+.methodIcon {
+    font-size: 36px;
+    color: #1677ff;
+}
+
+.methodTitle {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.methodDescription {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+} 

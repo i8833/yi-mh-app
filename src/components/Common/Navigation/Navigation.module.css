@@ -1,0 +1,35 @@
+.navigation {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
+}
+
+.homeButton {
+  font-size: 16px;
+  height: 40px;
+  padding: 4px 15px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.homeButton:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    top: 8px;
+    left: 8px;
+  }
+  
+  .homeButton {
+    font-size: 14px;
+    height: 32px;
+  }
+} 

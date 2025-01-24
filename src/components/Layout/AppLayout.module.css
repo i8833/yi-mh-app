@@ -1,0 +1,84 @@
+.layout {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.sider {
+  box-shadow: 2px 0 8px 0 rgba(29,35,41,.05);
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: linear-gradient(120deg, #1890ff, #722ed1);
+  border-radius: 6px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.content {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  border-right: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+  }
+  
+  .main {
+    padding: 1rem;
+  }
+  
+  .header {
+    padding: 0.5rem 1rem;
+  }
+} 

@@ -1,0 +1,18 @@
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    color: rgba(0, 0, 0, 0.45);
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.text {
+    display: inline-block;
+    padding: 0 24px;
+    background-color: #fff;
+    transform: translateY(-50%);
+} 

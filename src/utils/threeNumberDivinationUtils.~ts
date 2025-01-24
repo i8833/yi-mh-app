@@ -1,0 +1,145 @@
+import gua64 from '../gua64.json';
+
+interface ThreeNumberParams {
+  num1: number;
+  num2: number;
+  num3: number;
+}
+
+interface GuaResult {
+  mainGua: {
+    name: string;
+    symbol: string;
+    changingLine?: number;
+  };
+  huGua: {
+    name: string;
+    symbol: string;
+  };
+  bianGua: {
+    name: string;
+    symbol: string;
+  };
+  cuoGua: {
+    name: string;
+    symbol: string;
+  };
+  zongGua: {
+    name: string;
+    symbol: string;
+  };
+}
+
+interface GuaData {
+  upperGua: string;
+  lowerGua: string;
+  name: string;
+  symbol: string;
+  binary: string;
+  upperSymbol: string;
+  lowerSymbol: string;
+  index: string;
+}
+
+// 获取卦的二进制表示（从下到上）
+const getGuaBinary = (guaNumber: number): string[] => {
+  switch(guaNumber) {
+    case 1: return ['1', '1', '1']; // 乾
+    case 2: return ['0', '1', '1']; // 兑
+    case 3: return ['1', '0', '1']; // 离
+    case 4: return ['0', '0', '1']; // 震
+    case 5: return ['1', '1', '0']; // 巽
+    case 6: return ['0', '1', '0']; // 坎
+    case 7: return ['1', '0', '0']; // 艮
+    case 8: return ['0', '0', '0']; // 坤
+    default: return ['0', '0', '0'];
+  }
+};
+
+// 根据二进制找到对应的卦
+const findHexagram = (binary: string): GuaData | undefined => {
+  const hexagrams = Object.values(gua64) as unknown as GuaData[];
+  return hexagrams.find(gua => gua.binary === binary);
+};
+
+// 计算变卦
+const getChangedGua = (binary: string[], changingLine: number): GuaData | undefined => {
+  const newBinary = [...binary];
+  // 注意：动爻位置从下往上数
+  newBinary[changingLine - 1] = newBinary[changingLine - 1] === '1' ? '0' : '1';
+  return findHexagram(newBinary.join(''));
+};
+
+export const calculateThreeNumberDivination = (params: ThreeNumberParams): GuaResult => {
+  const { num1, num2, num3 } = params;
+
+  // 计算上下卦和动爻
+  const upperGua = num1 % 8 || 8;  // 第一个数除8余数为上卦，余数为0时取8
+  const lowerGua = num2 % 8 || 8;  // 第二个数除8余数为下卦，余数为0时取8
+  const changingLine = (num1 + num2 + num3) % 6 || 6;  // 三数之和除6余数为动爻，余数为0时取6
+
+  // 获取完整的六爻二进制（从下到上）
+  const upperBinary = getGuaBinary(upperGua);
+  const lowerBinary = getGuaBinary(lowerGua);
+  const fullBinary = [...lowerBinary, ...upperBinary];
+
+  console.log('卦象计算:', {
+    upperGua,
+    lowerGua,
+    changingLine,
+    binary: fullBinary.join('')
+  });
+
+  // 获取主卦
+  const mainHexagram = findHexagram(fullBinary.join(''));
+  if (!mainHexagram) throw new Error('无法找到对应的卦象');
+
+  // 计算变卦
+  const changedHexagram = getChangedGua(fullBinary, changingLine);
+  if (!changedHexagram) throw new Error('无法计算变卦');
+
+  return {
+    mainGua: {
+      name: mainHexagram.name,
+      symbol: mainHexagram.symbol,
+      changingLine
+    },
+    huGua: {
+      name: '火泽睽', // 需要实现互卦计算
+      symbol: '䷥'
+    },
+    bianGua: {
+      name: changedHexagram.name,
+      symbol: changedHexagram.symbol
+    },
+    cuoGua: {
+      name: '泽火革', // 需要实现错卦计算
+      symbol: '䷰'
+    },
+    zongGua: {
+      name: '火山旅', // 需要实现综卦计算
+      symbol: '䷷'
+    }
+  };
+};
+
+// 以下是辅助计算函数，从原文件复制并简化...
+const calculateHuGua = (upperGua: number, lowerGua: number) => {
+  // 从原文件复制相关实现
+  // ...
+};
+
+const calculateChangedGua = (upperGua: number, lowerGua: number, changingLine: number) => {
+  // 从原文件复制相关实现
+  // ...
+};
+
+const calculateOppositeGua = (upperGua: number, lowerGua: number) => {
+  // 从原文件复制相关实现
+  // ...
+};
+
+const calculateSynthesisGua = (upperGua: number, lowerGua: number) => {
+  // 从原文件复制相关实现
+  // ...
+}; 

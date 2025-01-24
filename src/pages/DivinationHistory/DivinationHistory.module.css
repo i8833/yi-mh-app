@@ -1,0 +1,106 @@
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.backButton {
+  padding: 0;
+}
+
+.title {
+  margin: 0 0 0 8px !important;
+}
+
+.emptyText {
+  text-align: center;
+  color: #999;
+  padding: 32px 0;
+}
+
+.recordItem {
+  padding: 16px !important;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.recordHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.recordContent {
+  padding: 0 8px;
+}
+
+.guaResultSection {
+  margin: 16px 0;
+}
+
+.mainGuaRow {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.secondaryGuaRow {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.guaItem {
+  flex: 1;
+}
+
+.guaName {
+  font-size: 16px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 4px;
+}
+
+.guaDetails {
+  font-size: 13px;
+  color: #8c8c8c;
+  margin-top: 4px;
+}
+
+.dividerSection {
+  margin: 24px 0;
+}
+
+.analysisSection {
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .recordItem {
+    padding: 12px !important;
+  }
+  
+  .recordContent {
+    padding: 12px;
+  }
+} 

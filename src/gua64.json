@@ -1,0 +1,644 @@
+{
+  "hexagrams": [
+    {
+      "upperGua": "乾",
+      "lowerGua": "乾",
+      "name": "乾为天",
+      "symbol": "䷀",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☰",
+      "binary": "111111",
+      "index": "1,1"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "乾",
+      "name": "泽天夬",
+      "symbol": "䷫",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☰",
+      "binary": "111110",
+      "index": "2,1"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "乾",
+      "name": "火天大有",
+      "symbol": "䷍",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☰",
+      "binary": "111101",
+      "index": "3,1"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "乾",
+      "name": "雷天大壮",
+      "symbol": "䷡",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☰",
+      "binary": "111100",
+      "index": "4,1"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "乾",
+      "name": "风天小畜",
+      "symbol": "䷈",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☰",
+      "binary": "111011",
+      "index": "5,1"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "乾",
+      "name": "水天需",
+      "symbol": "䷄",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☰",
+      "binary": "111010",
+      "index": "6,1"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "乾",
+      "name": "山天大畜",
+      "symbol": "䷙",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☰",
+      "binary": "111001",
+      "index": "7,1"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "乾",
+      "name": "地天泰",
+      "symbol": "䷊",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☰",
+      "binary": "111000",
+      "index": "8,1"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "兑",
+      "name": "天泽履",
+      "symbol": "䷉",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☱",
+      "binary": "110111",
+      "index": "1,2"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "兑",
+      "name": "兑为泽",
+      "symbol": "䷹",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☱",
+      "binary": "110110",
+      "index": "2,2"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "兑",
+      "name": "火泽睽",
+      "symbol": "䷥",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☱",
+      "binary": "110101",
+      "index": "3,2"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "兑",
+      "name": "雷泽归妹",
+      "symbol": "䷵",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☱",
+      "binary": "110100",
+      "index": "4,2"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "兑",
+      "name": "风泽中孚",
+      "symbol": "䷼",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☱",
+      "binary": "110011",
+      "index": "5,2"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "兑",
+      "name": "水泽节",
+      "symbol": "䷧",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☱",
+      "binary": "110010",
+      "index": "6,2"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "兑",
+      "name": "山泽损",
+      "symbol": "䷨",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☱",
+      "binary": "110001",
+      "index": "7,2"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "兑",
+      "name": "地泽临",
+      "symbol": "䷒",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☱",
+      "binary": "110000",
+      "index": "8,2"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "离",
+      "name": "天火同人",
+      "symbol": "䷌",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☲",
+      "binary": "101111",
+      "index": "1,3"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "离",
+      "name": "泽火革",
+      "symbol": "䷰",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☲",
+      "binary": "101110",
+      "index": "2,3"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "离",
+      "name": "离为火",
+      "symbol": "䷝",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☲",
+      "binary": "101101",
+      "index": "3,3"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "离",
+      "name": "雷火丰",
+      "symbol": "䷶",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☲",
+      "binary": "101100",
+      "index": "4,3"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "离",
+      "name": "风火家人",
+      "symbol": "䷤",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☲",
+      "binary": "101011",
+      "index": "5,3"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "离",
+      "name": "水火既济",
+      "symbol": "䷾",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☲",
+      "binary": "101010",
+      "index": "6,3"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "离",
+      "name": "山火贲",
+      "symbol": "䷕",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☲",
+      "binary": "101001",
+      "index": "7,3"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "离",
+      "name": "地火明夷",
+      "symbol": "䷣",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☲",
+      "binary": "101000",
+      "index": "8,3"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "震",
+      "name": "天雷无妄",
+      "symbol": "䷘",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☳",
+      "binary": "100111",
+      "index": "1,4"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "震",
+      "name": "泽雷随",
+      "symbol": "䷐",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☳",
+      "binary": "100110",
+      "index": "2,4"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "震",
+      "name": "火雷噬嗑",
+      "symbol": "䷔",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☳",
+      "binary": "100101",
+      "index": "3,4"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "震",
+      "name": "震为雷",
+      "symbol": "䷲",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☳",
+      "binary": "100100",
+      "index": "4,4"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "震",
+      "name": "风雷益",
+      "symbol": "䷩",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☳",
+      "binary": "100011",
+      "index": "5,4"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "震",
+      "name": "水雷屯",
+      "symbol": "䷂",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☳",
+      "binary": "100010",
+      "index": "6,4"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "震",
+      "name": "山雷颐",
+      "symbol": "䷚",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☳",
+      "binary": "100001",
+      "index": "7,4"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "震",
+      "name": "地雷复",
+      "symbol": "䷗",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☳",
+      "binary": "100000",
+      "index": "8,4"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "巽",
+      "name": "天风姤",
+      "symbol": "䷫",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☴",
+      "binary": "011111",
+      "index": "1,5"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "巽",
+      "name": "泽风大过",
+      "symbol": "䷛",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☴",
+      "binary": "011110",
+      "index": "2,5"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "巽",
+      "name": "火风鼎",
+      "symbol": "䷱",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☴",
+      "binary": "011101",
+      "index": "3,5"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "巽",
+      "name": "雷风恒",
+      "symbol": "䷟",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☴",
+      "binary": "011100",
+      "index": "4,5"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "巽",
+      "name": "巽为风",
+      "symbol": "䷸",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☴",
+      "binary": "011011",
+      "index": "5,5"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "巽",
+      "name": "水风井",
+      "symbol": "䷯",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☴",
+      "binary": "011010",
+      "index": "6,5"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "巽",
+      "name": "山风蛊",
+      "symbol": "䷑",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☴",
+      "binary": "011001",
+      "index": "7,5"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "巽",
+      "name": "地风升",
+      "symbol": "䷭",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☴",
+      "binary": "011000",
+      "index": "8,5"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "坎",
+      "name": "天水讼",
+      "symbol": "䷅",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☵",
+      "binary": "010111",
+      "index": "1,6"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "坎",
+      "name": "泽水困",
+      "symbol": "䷮",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☵",
+      "binary": "010110",
+      "index": "2,6"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "坎",
+      "name": "火水未济",
+      "symbol": "䷿",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☵",
+      "binary": "010101",
+      "index": "3,6"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "坎",
+      "name": "雷水解",
+      "symbol": "䷧",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☵",
+      "binary": "010100",
+      "index": "4,6"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "坎",
+      "name": "风水涣",
+      "symbol": "䷺",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☵",
+      "binary": "010011",
+      "index": "5,6"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "坎",
+      "name": "坎为水",
+      "symbol": "䷜",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☵",
+      "binary": "010010",
+      "index": "6,6"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "坎",
+      "name": "山水蒙",
+      "symbol": "䷃",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☵",
+      "binary": "010001",
+      "index": "7,6"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "坎",
+      "name": "地水师",
+      "symbol": "䷆",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☵",
+      "binary": "010000",
+      "index": "8,6"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "艮",
+      "name": "天山遁",
+      "symbol": "䷠",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☶",
+      "binary": "001111",
+      "index": "1,7"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "艮",
+      "name": "泽山咸",
+      "symbol": "䷞",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☶",
+      "binary": "001110",
+      "index": "2,7"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "艮",
+      "name": "火山旅",
+      "symbol": "䷷",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☶",
+      "binary": "001101",
+      "index": "3,7"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "艮",
+      "name": "雷山小过",
+      "symbol": "䷽",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☶",
+      "binary": "001100",
+      "index": "4,7"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "艮",
+      "name": "风山渐",
+      "symbol": "䷴",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☶",
+      "binary": "001011",
+      "index": "5,7"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "艮",
+      "name": "水山蹇",
+      "symbol": "䷦",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☶",
+      "binary": "001010",
+      "index": "6,7"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "艮",
+      "name": "艮为山",
+      "symbol": "䷳",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☶",
+      "binary": "001001",
+      "index": "7,7"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "艮",
+      "name": "地山谦",
+      "symbol": "䷎",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☶",
+      "binary": "001000",
+      "index": "8,7"
+    },
+    {
+      "upperGua": "乾",
+      "lowerGua": "坤",
+      "name": "天地否",
+      "symbol": "䷋",
+      "upperSymbol": "☰",
+      "lowerSymbol": "☷",
+      "binary": "000111",
+      "index": "1,8"
+    },
+    {
+      "upperGua": "兑",
+      "lowerGua": "坤",
+      "name": "泽地萃",
+      "symbol": "䷬",
+      "upperSymbol": "☱",
+      "lowerSymbol": "☷",
+      "binary": "000110",
+      "index": "2,8"
+    },
+    {
+      "upperGua": "离",
+      "lowerGua": "坤",
+      "name": "火地晋",
+      "symbol": "䷢",
+      "upperSymbol": "☲",
+      "lowerSymbol": "☷",
+      "binary": "000101",
+      "index": "3,8"
+    },
+    {
+      "upperGua": "震",
+      "lowerGua": "坤",
+      "name": "雷地豫",
+      "symbol": "䷏",
+      "upperSymbol": "☳",
+      "lowerSymbol": "☷",
+      "binary": "000100",
+      "index": "4,8"
+    },
+    {
+      "upperGua": "巽",
+      "lowerGua": "坤",
+      "name": "风地观",
+      "symbol": "䷓",
+      "upperSymbol": "☴",
+      "lowerSymbol": "☷",
+      "binary": "000011",
+      "index": "5,8"
+    },
+    {
+      "upperGua": "坎",
+      "lowerGua": "坤",
+      "name": "水地比",
+      "symbol": "䷇",
+      "upperSymbol": "☵",
+      "lowerSymbol": "☷",
+      "binary": "000010",
+      "index": "6,8"
+    },
+    {
+      "upperGua": "艮",
+      "lowerGua": "坤",
+      "name": "山地剥",
+      "symbol": "䷖",
+      "upperSymbol": "☶",
+      "lowerSymbol": "☷",
+      "binary": "000001",
+      "index": "7,8"
+    },
+    {
+      "upperGua": "坤",
+      "lowerGua": "坤",
+      "name": "坤为地",
+      "symbol": "䷁",
+      "upperSymbol": "☷",
+      "lowerSymbol": "☷",
+      "binary": "000000",
+      "index": "8,8"
+    }
+  ]
+} 

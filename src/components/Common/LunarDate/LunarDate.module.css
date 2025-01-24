@@ -1,0 +1,53 @@
+.container {
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dateText {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.timeText {
+  font-size: 15px;
+  color: #666;
+}
+
+.ganzhiText {
+  font-size: 14px;
+  color: #666;
+}
+
+.ganzhiText :global(.ant-space-item) {
+  min-width: 120px;
+}
+
+.extraInfo {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #ddd;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .dateText {
+    font-size: 14px;
+  }
+  
+  .timeText, .ganzhiText, .extraInfo {
+    font-size: 13px;
+  }
+  
+  .ganzhiText :global(.ant-space-item) {
+    min-width: auto;
+  }
+} 

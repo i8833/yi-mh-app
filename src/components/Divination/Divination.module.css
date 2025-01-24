@@ -1,0 +1,119 @@
+.divinationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.timeInfo {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeInfo p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resultContainer {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+}
+
+.resultTitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.hexagram {
+    text-align: center;
+}
+
+.hexagram h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.meaning {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f9fc;
+    border-radius: 4px;
+}
+
+.yaoLines {
+    text-align: left;
+}
+
+.yaoLine {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.lineNumber {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #2c3e50;
+    min-width: 20px;
+}
+
+.lineText {
+    color: #34495e;
+}
+
+.hexagramSymbol {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+.trigramInfo {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.trigramInfo p {
+    margin: 8px 0;
+    color: #34495e;
+} 
