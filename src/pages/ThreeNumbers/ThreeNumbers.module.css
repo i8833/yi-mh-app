@@ -1,0 +1,27 @@
+.pageContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .resultSection {
+    padding: 15px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+  }
+} 

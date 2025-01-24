@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Title level={1} className={styles.mainTitle}>梅花易数</Title>
+        <Title level={2} className={styles.mainTitle}>梅花易数</Title>
         <Text className={styles.subtitle}>寂然不动，感而遂通</Text>
       </div>
 
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
       </div>
 
       <Divider className={styles.divider}>
-        <Text className={styles.dividerText}>历史记录</Text>
+        <Text className={styles.dividerText}></Text>
       </Divider>
 
       <div className={styles.divinationWrapper}>

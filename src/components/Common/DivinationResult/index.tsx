@@ -1,35 +1,12 @@
 import React from 'react';
 import { Space, Typography, Card } from 'antd';
 import styles from './DivinationResult.module.css';
+import type { IDivinationResult } from '../../../types/divination';
 
 const { Text } = Typography;
 
 interface DivinationResultProps {
-  result: {
-    mainGua: {
-      name: string;
-      symbol: string;
-      upperGua: string;
-      lowerGua: string;
-      changingLine: number;
-    };
-    huGua: {
-      name: string;
-      symbol: string;
-    };
-    bianGua: {
-      name: string;
-      symbol: string;
-    };
-    cuoGua: {
-      name: string;
-      symbol: string;
-    };
-    zongGua: {
-      name: string;
-      symbol: string;
-    };
-  };
+  result: IDivinationResult;
   analysis?: string;
   onSymbolClick?: (name: string) => void;
 }

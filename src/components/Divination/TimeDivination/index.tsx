@@ -274,16 +274,16 @@ const TimeDivination: React.FC = () => {
         <div className={styles.header}>
           <Button 
             type="link" 
-            icon={<LeftOutlined />} 
+            icon={<LeftOutlined style={{ color: '#666' }} />} 
             onClick={() => navigate('/')}
             className={styles.backButton}
           >
             返回首页
           </Button>
-          <Title level={2} className={styles.title}>时间起卦</Title>
+          <Title level={3} className={styles.title}>时间起卦</Title>
           <Button
             type="link"
-            icon={<HistoryOutlined />}
+            icon={<HistoryOutlined style={{ color: '#666' }} />}
             onClick={handleViewHistory}
             className={styles.historyButton}
           >
@@ -296,18 +296,18 @@ const TimeDivination: React.FC = () => {
           <div className={styles.timeInfo}>
             <Space direction="vertical" className={styles.timeDetails}>
               <div className={styles.timeRow}>
-                <Text>公历：{currentTime.year}年{currentTime.month}月{currentTime.day}日 {currentTime.hour}时</Text>
+                <Text style={{ color: '#666' }}>公历：{currentTime.year}年{currentTime.month}月{currentTime.day}日 {currentTime.hour}时</Text>
               </div>
               <div className={styles.timeRow}>
-                <Text>农历：{currentTime.lunarYear}{currentTime.lunarMonth}{currentTime.lunarDay} {currentTime.lunarHour}</Text>
+                <Text style={{ color: '#666' }}>农历：{currentTime.lunarYear}{currentTime.lunarMonth}{currentTime.lunarDay} {currentTime.lunarHour}</Text>
               </div>
               <div className={styles.timeRow}>
-                <Text>年干支：{currentTime.yearGanZhi}</Text>
-                <Text>月干支：{currentTime.monthGanZhi}</Text>
+                <Text style={{ color: '#666' }}>年干支：{currentTime.yearGanZhi}</Text>
+                <Text style={{ color: '#666' }}>月干支：{currentTime.monthGanZhi}</Text>
               </div>
               <div className={styles.timeRow}>
-                <Text>日干支：{currentTime.dayGanZhi}</Text>
-                <Text>时干支：{currentTime.hourGanZhi}</Text>
+                <Text style={{ color: '#666' }}>日干支：{currentTime.dayGanZhi}</Text>
+                <Text style={{ color: '#666' }}>时干支：{currentTime.hourGanZhi}</Text>
               </div>
             </Space>
           </div>

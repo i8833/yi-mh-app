@@ -13,4 +13,57 @@ html, body {
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+/* 全局响应式布局基础样式 */
+:root {
+  --max-mobile-width: 768px;
+  --page-padding: 20px;
+  --card-gap: 15px;
+}
+
+/* 基础容器样式 */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--page-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  /* 通用容器样式 */
+  .container {
+    padding: 10px;
+  }
+
+  /* 卡片通用样式 */
+  .card {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+
+  /* 按钮通用样式 */
+  .button {
+    height: 36px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  /* 标题文字大小 */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* 文本内容 */
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 } 

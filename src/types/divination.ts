@@ -160,4 +160,40 @@ export interface DivinationStore {
   setDivinationResult: (result: DivinationResult) => void;
   addDivinationRecord: (record: DivinationRecord) => void;
   getRecords: () => DivinationRecord[];
+}
+
+export interface IDivinationResult {
+  mainGua: {
+    name: string;
+    symbol: string;
+    changingLine: number;
+    upperGua: string;
+    lowerGua: string;
+  };
+  huGua: {
+    name: string;
+    symbol: string;
+    upperGua: string;
+    lowerGua: string;
+  };
+  bianGua: {
+    name: string;
+    symbol: string;
+    upperGua: string;
+    lowerGua: string;
+  };
+  cuoGua: {
+    name: string;
+    symbol: string;
+    upperGua: string;
+    lowerGua: string;
+  };
+  zongGua: {
+    name: string;
+    symbol: string;
+    upperGua: string;
+    lowerGua: string;
+  };
+  hexagram: string;
+  timestamp: string;
 } 

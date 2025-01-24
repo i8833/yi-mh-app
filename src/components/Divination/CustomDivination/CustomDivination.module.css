@@ -1,39 +1,50 @@
 .container {
-  padding: 24px;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
 }
 
 .card {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding-top: 24px;
 }
 
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   position: relative;
+  height: 80px;
 }
 
 .backButton {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: calc(50% + 24px);
   transform: translateY(-50%);
+  color: #666 !important;
 }
 
 .historyButton {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: calc(50% + 24px);
   transform: translateY(-50%);
+  color: #666 !important;
 }
 
 .title {
   flex: 1;
   text-align: center;
   margin: 0 !important;
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .content {
@@ -76,12 +87,17 @@
   margin-top: 8px;
   width: 100%;
   border-radius: 4px;
+  resize: none;
 }
 
 .divinationButton {
   width: 100%;
   height: 48px;
   font-size: 18px;
+}
+
+.resultSection {
+  width: 100%;
 }
 
 .saveButton {
@@ -121,15 +137,38 @@
   width: 100%;
 }
 
+/* 移动端适配 */
 @media (max-width: 768px) {
   .container {
-    padding: 16px;
+    padding: 10px;
   }
-  
+
+  .selectArea {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .selectGroup {
-    padding: 16px;
+    width: 100%;
   }
-  
+
+  select {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .buttonArea {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  button {
+    width: 100%;
+    height: 40px;
+  }
+
   .selectItem {
     flex-direction: column;
     align-items: flex-start;
