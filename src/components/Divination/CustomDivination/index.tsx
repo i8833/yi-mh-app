@@ -128,33 +128,64 @@ const CustomDivination: React.FC = () => {
 
   return (
     <div style={{ 
-      width: '100%',
-      maxWidth: '100%',
-      padding: '0',
-      margin: '0 auto',
-      backgroundColor: '#fff'
+      width: '100vw',
+      height: '100vh',
+      margin: 0,
+      padding: 0,
+      backgroundColor: '#fff',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      overflowY: 'auto',
+      zIndex: 1000
     }}>
       <Card style={{ 
-        borderRadius: '0',
-        boxShadow: 'none',
         width: '100%',
-        maxWidth: '100%',
-        marginBottom: '0.5rem',
+        minHeight: '100%',
+        margin: 0,
         padding: '0.5rem',
+        border: 'none',
+        borderRadius: 0,
+        boxShadow: 'none'
       }}>
-        <div className={styles.header}>
-          <Title level={2} className={styles.title} style={{
-            marginTop: '0.5rem',
-            marginBottom: '1rem'
+        <div className={styles.header} style={{
+          position: 'sticky',
+          top: 0,
+          backgroundColor: '#fff',
+          zIndex: 10,
+          padding: '0.5rem 0'
+        }}>
+          <Button 
+            type="link" 
+            icon={<LeftOutlined />} 
+            onClick={() => navigate('/')}
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: '50%',
+              transform: 'translateY(-50%)'
+            }}
+          >
+            返回
+          </Button>
+          <Title level={2} style={{
+            margin: 0,
+            fontSize: '1.2rem',
+            textAlign: 'center'
           }}>自选起卦</Title>
         </div>
 
-        <Space direction="vertical" size="large" className={styles.content} style={{
+        <Space direction="vertical" size="large" style={{
           width: '100%',
-          padding: '0 0.5rem'
+          padding: '0.5rem',
+          marginTop: '1rem'
         }}>
           {/* 卦象选择区域 */}
-          <div className={styles.selectGroup}>
+          <div className={styles.selectGroup} style={{
+            background: '#f5f5f5',
+            padding: '1rem',
+            borderRadius: '8px'
+          }}>
             <div className={styles.selectItem}>
               <Text>上卦：</Text>
               <Select
@@ -203,7 +234,10 @@ const CustomDivination: React.FC = () => {
           </div>
 
           {/* 所问之事输入区域 */}
-          <div className={styles.questionSection}>
+          <div className={styles.questionSection} style={{
+            width: '100%',
+            padding: '0 0.5rem'
+          }}>
             <Text strong>所问之事（选填）：</Text>
             <Input.TextArea 
               rows={4}
@@ -219,14 +253,21 @@ const CustomDivination: React.FC = () => {
             size="large" 
             onClick={handleDivination}
             loading={loading}
-            className={styles.divinationButton}
+            style={{
+              width: '100%',
+              height: '44px',
+              margin: '1rem 0'
+            }}
           >
             {loading ? '占卜中...' : '立即起卦'}
           </Button>
 
           {result && (
-            <>
-              <Divider />
+            <div style={{
+              width: '100%',
+              padding: '0 0.5rem'
+            }}>
+              <Divider style={{ margin: '1rem 0' }} />
               <div className={styles.resultSection}>
                 <DivinationResult 
                   result={result}
@@ -234,11 +275,14 @@ const CustomDivination: React.FC = () => {
                   onSymbolClick={handleSymbolClick}
                 />
               </div>
-            </>
+            </div>
           )}
 
           {result && (
-            <div className={styles.analysisSection}>
+            <div className={styles.analysisSection} style={{
+              width: '100%',
+              padding: '0 0.5rem'
+            }}>
               <Text strong>断语、分析（选填）：</Text>
               <Input.TextArea 
                 rows={4}
@@ -255,30 +299,23 @@ const CustomDivination: React.FC = () => {
             type="primary"
             icon={<SaveOutlined />}
             onClick={handleSave}
-            className={styles.saveButton}
+            style={{
+              width: '100%',
+              height: '44px',
+              margin: '1rem 0'
+            }}
           >
             保存记录
           </Button>
         </Space>
-
-        {/* 添加模态框组件 */}
-        <SymbolModal 
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          symbol={selectedSymbol}
-        />
       </Card>
 
-      <Button 
-        type="link" 
-        icon={<LeftOutlined style={{ color: '#666' }} />} 
-        onClick={() => navigate('/')}
-        style={{
-          marginLeft: '0.5rem'
-        }}
-      >
-        返回首页
-      </Button>
+      {/* 模态框组件 */}
+      <SymbolModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        symbol={selectedSymbol}
+      />
     </div>
   );
 };
