@@ -1,50 +1,164 @@
 .container {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 48px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
-.card {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding-top: 24px;
-}
-
+/* 顶部导航 */
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
+  padding: 0 8px;
   position: relative;
-  height: 80px;
 }
 
-.backButton {
-  position: absolute;
-  left: 0;
-  top: calc(50% + 24px);
-  transform: translateY(-50%);
-  color: #666 !important;
-}
-
-.historyButton {
-  position: absolute;
-  right: 0;
-  top: calc(50% + 24px);
-  transform: translateY(-50%);
-  color: #666 !important;
+.backButton, .historyButton {
+  color: #1890ff;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
-  flex: 1;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
   text-align: center;
-  margin: 0 !important;
   position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 0;
+}
+
+.card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+}
+
+.inputSection {
+  margin-bottom: 32px;
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.inputItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.input {
+  width: 100%;
+}
+
+/* 输入框中的数字0样式 */
+.input :global(.ant-input-number-input[value="0"]) {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  min-height: 80px;
+}
+
+.button {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+  
+  .header {
+    margin-bottom: 32px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .card {
+    padding: 16px;
+    margin-top: 16px;
+  }
+  
+  .inputGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .backButton, .historyButton {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+  
+  .section {
+    margin-bottom: 24px;
+  }
+  
+  .button {
+    margin-bottom: 24px;
+  }
+}
+
+/* 确保在更小的屏幕上也能正常显示 */
+@media (max-width: 375px) {
+  .container {
+    padding: 8px;
+  }
+  
+  .card {
+    padding: 12px;
+  }
+  
+  .title {
+    font-size: 16px;
+  }
 }
 
 .content {
@@ -81,13 +195,6 @@
 
 .analysisSection {
   margin: 16px 0;
-}
-
-.textarea {
-  margin-top: 8px;
-  width: 100%;
-  border-radius: 4px;
-  resize: none;
 }
 
 .divinationButton {

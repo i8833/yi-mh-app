@@ -166,9 +166,9 @@ export interface IDivinationResult {
   mainGua: {
     name: string;
     symbol: string;
-    changingLine: number;
     upperGua: string;
     lowerGua: string;
+    changingLine: number;
   };
   huGua: {
     name: string;
@@ -194,6 +194,13 @@ export interface IDivinationResult {
     upperGua: string;
     lowerGua: string;
   };
-  hexagram: string;
   timestamp: string;
+  hexagram?: {
+    name: string;
+    symbol: string;
+    upperTrigram: Trigram;
+    lowerTrigram: Trigram;
+    changingLine: number;
+    meaning: string;
+  };
 } 

@@ -1,0 +1,1 @@
+export { default as ThreeNumberDivination } from './Divination/ThreeNumberDivination'; 

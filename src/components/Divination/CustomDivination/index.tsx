@@ -130,23 +130,9 @@ const CustomDivination: React.FC = () => {
     <div className={styles.container}>
       <Card className={styles.card}>
         <div className={styles.header}>
-          <Button 
-            type="link" 
-            icon={<LeftOutlined />} 
-            onClick={() => navigate('/')}
-            className={styles.backButton}
-          >
-            返回首页
-          </Button>
+          
           <Title level={2} className={styles.title}>自选起卦</Title>
-          <Button
-            type="link"
-            icon={<HistoryOutlined />}
-            onClick={handleViewHistory}
-            className={styles.historyButton}
-          >
-            查看记录
-          </Button>
+          
         </div>
 
         <Space direction="vertical" size="large" className={styles.content}>
@@ -265,6 +251,16 @@ const CustomDivination: React.FC = () => {
           symbol={selectedSymbol}
         />
       </Card>
+
+      <Button 
+          type="link" 
+          icon={<LeftOutlined style={{ color: '#666' }} />} 
+          onClick={() => navigate('/')}
+          
+        >
+          返回首页
+        </Button>
+        
     </div>
   );
 };

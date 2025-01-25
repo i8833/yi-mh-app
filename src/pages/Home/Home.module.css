@@ -175,4 +175,15 @@
   .methodTitle {
     font-size: 16px !important;
   }
+}
+
+@media (min-width: 768px) {
+  .methodsContainer {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  
+  .methodCard {
+    margin: 0 1rem;
+  }
 } 

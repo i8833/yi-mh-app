@@ -269,29 +269,50 @@ const TimeDivination: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Card className={styles.card}>
-        <div className={styles.header}>
-          <Button 
-            type="link" 
-            icon={<LeftOutlined style={{ color: '#666' }} />} 
-            onClick={() => navigate('/')}
-            className={styles.backButton}
-          >
-            返回首页
-          </Button>
-          <Title level={3} className={styles.title}>时间起卦</Title>
-          <Button
-            type="link"
-            icon={<HistoryOutlined style={{ color: '#666' }} />}
-            onClick={handleViewHistory}
-            className={styles.historyButton}
-          >
-            查看记录
-          </Button>
-        </div>
+    <div className={styles.container} style={{ 
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '1.5rem',
+      backgroundColor: '#f5f5f5'
+    }}>
+      {/* 优化头部 */}
+      <div className={styles.header} style={{ 
+        textAlign: 'center',
+        marginBottom: '2rem',
+        padding: '2rem',
+        backgroundColor: '#fff',
+        borderRadius: '12px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+        width: '100%',
+        maxWidth: '600px'
+      }}>
+        
+        <Title level={2} style={{ 
+          fontSize: '1.8rem',
+          marginBottom: '0.5rem',
+          color: '#1890ff'
+        }}>
+          时间起卦
+        </Title>   
 
-        <Space direction="vertical" size="large" className={styles.content}>
+        
+
+      </div>
+
+      {/* 优化内容容器 */}
+      <div style={{ 
+        flex: 1,
+        width: '100%',
+        maxWidth: '600px',
+        marginBottom: '2rem'
+      }}>
+        <Card style={{ 
+          borderRadius: '12px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          padding: '1.5rem'
+        }}>
           {/* 时间信息区域 */}
           <div className={styles.timeInfo}>
             <Space direction="vertical" className={styles.timeDetails}>
@@ -329,7 +350,13 @@ const TimeDivination: React.FC = () => {
             size="large" 
             onClick={handleDivination}
             loading={loading}
-            className={styles.divinationButton}
+            style={{ 
+              width: '100%',
+              height: '48px',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              marginBottom: '2rem'  // 增加下边距，与保存记录按钮分开
+            }}
           >
             {loading ? '占卜中...' : '立即起卦'}
           </Button>
@@ -362,19 +389,47 @@ const TimeDivination: React.FC = () => {
             type="primary"
             icon={<SaveOutlined />}
             onClick={handleSave}
-            className={styles.saveButton}
+            style={{ 
+              width: '100%',
+              height: '48px',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
           >
             保存记录
           </Button>
-        </Space>
+        </Card>
 
-        {/* 添加模态框组件 */}
-        <SymbolModal 
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          symbol={selectedSymbol}
-        />
-      </Card>
+        <Button 
+          type="link" 
+          icon={<LeftOutlined style={{ color: '#666' }} />} 
+          onClick={() => navigate('/')}
+        >
+          返回首页
+        </Button>
+        
+      </div>
+
+      {/* 优化页脚 */}
+      <div style={{ 
+        textAlign: 'left',
+        marginTop: '0rem',
+        padding: '1rem',
+        color: '#666',
+        fontSize: '0.9rem',
+        width: '100%',
+        maxWidth: '600px'
+      }}>
+        
+        
+      </div>
+
+      {/* 添加模态框组件 */}
+      <SymbolModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        symbol={selectedSymbol}
+      />
     </div>
   );
 };

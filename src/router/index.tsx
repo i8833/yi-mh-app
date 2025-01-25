@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouteObject } from 'react-router-dom';
 import React from 'react';
 import AppLayout from '../components/Layout/AppLayout';
 import Home from '../pages/Home';
@@ -7,6 +7,14 @@ import ThreeNumberDivination from '../components/Divination/ThreeNumberDivinatio
 import CustomDivination from '../components/Divination/CustomDivination';
 import DivinationHistory from '../pages/DivinationHistory';
 import { ErrorElement } from '../components/ErrorBoundary';
+
+export const routes: RouteObject[] = [
+  {
+    path: '/divination/number',
+    element: <ThreeNumberDivination />
+  },
+  // ... 其他路由配置
+];
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +34,7 @@ export const router = createBrowserRouter([
             element: <TimeDivination />,
           },
           {
-            path: 'three-number',
+            path: 'number',
             element: <ThreeNumberDivination />,
           },
           {

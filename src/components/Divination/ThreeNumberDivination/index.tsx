@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Typography, Input, InputNumber, message } from 'antd';
+import { Button, Typography, Input, InputNumber, message, Card } from 'antd';
 import { LeftOutlined, SaveOutlined, HistoryOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { calculateThreeNumberDivination } from '../../../utils/threeNumberDivinationUtils';
@@ -13,6 +13,7 @@ import { SymbolModal } from '../../SymbolModal';
 const { Title, Text } = Typography;
 
 const ThreeNumberDivination: React.FC = () => {
+  console.log('ThreeNumberDivination component rendered');
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<IDivinationResult | null>(null);
@@ -54,7 +55,21 @@ const ThreeNumberDivination: React.FC = () => {
         bianGua: calculatedResult.bianGua,
         cuoGua: calculatedResult.cuoGua,
         zongGua: calculatedResult.zongGua,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        hexagram: {
+          name: calculatedResult.mainGua.name,
+          symbol: calculatedResult.mainGua.symbol,
+          upperTrigram: {
+            name: calculatedResult.mainGua.upperGua,
+            symbol: ''
+          },
+          lowerTrigram: {
+            name: calculatedResult.mainGua.lowerGua,
+            symbol: ''
+          },
+          changingLine: calculatedResult.mainGua.changingLine || 1,
+          meaning: ''
+        }
       };
       
       setResult(divinationResult);
@@ -107,26 +122,10 @@ const ThreeNumberDivination: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Button 
-          type="text" 
-          icon={<LeftOutlined />} 
-          onClick={() => navigate('/')}
-          className={styles.backButton}
-        >
-          返回首页
-        </Button>
-        <Title level={3} className={styles.title}>三数起卦</Title>
-        <Button
-          type="text"
-          icon={<HistoryOutlined />}
-          onClick={handleViewHistory}
-          className={styles.historyButton}
-        >
-          查看记录
-        </Button>
+        <Title level={2} className={styles.title}>三数起卦</Title>
       </div>
 
-      <div className={styles.card}>
+      <Card className={styles.card}>
         <div className={styles.inputSection}>
           <div className={styles.inputGrid}>
             <div className={styles.inputItem}>
@@ -172,7 +171,7 @@ const ThreeNumberDivination: React.FC = () => {
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="请输入您想问卜的事情..."
             className={styles.textarea}
-            rows={3}
+            rows={4}
           />
         </div>
         
@@ -181,14 +180,13 @@ const ThreeNumberDivination: React.FC = () => {
           onClick={handleDivination}
           loading={loading}
           className={styles.button}
-          block
         >
           {loading ? '占卦中...' : '立即起卦'}
         </Button>
 
         {result && (
           <>
-            <div className={styles.section}>
+            <div className={styles.resultSection}>
               <DivinationResultComponent 
                 result={result}
                 analysis={analysis}
@@ -212,12 +210,22 @@ const ThreeNumberDivination: React.FC = () => {
               icon={<SaveOutlined />}
               onClick={handleSave}
               className={styles.button}
-              block
             >
               保存记录
             </Button>
           </>
         )}
+      </Card>
+
+      <div className={styles.footerActions}>
+        <Button 
+          type="link" 
+          icon={<LeftOutlined />}
+          onClick={() => navigate('/')}
+          className={styles.backButton}
+        >
+          返回首页
+        </Button>
       </div>
 
       <SymbolModal 
