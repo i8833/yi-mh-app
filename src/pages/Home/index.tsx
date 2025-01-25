@@ -15,18 +15,18 @@ const Home: React.FC = () => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: '1.5rem',
+      padding: '0',
       backgroundColor: '#f5f5f5'
     }}>
       <div className={styles.header} style={{ 
         textAlign: 'center',
-        marginBottom: '2rem',
-        padding: '1rem',
+        marginBottom: '0.5rem',
+        padding: '0.5rem',
         backgroundColor: '#fff',
-        borderRadius: '12px',
+        borderRadius: '0',
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
         width: '100%',
-        maxWidth: '600px'
+        maxWidth: '100%'
       }}>
         <Title level={2} style={{ 
           fontSize: '1.8rem',
@@ -48,16 +48,18 @@ const Home: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         flexWrap: 'wrap',
-        gap: '1.5rem',
-        marginBottom: '2rem',
+        gap: '0.5rem',
+        marginBottom: '0.5rem',
         width: '100%',
-        maxWidth: '1200px'
+        maxWidth: '100%',
+        padding: '0 0.5rem'
       }}>
         <Card className={styles.methodCard} style={{ 
-          borderRadius: '12px',
+          borderRadius: '0',
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
           transition: 'transform 0.2s',
-          width: '280px',
+          width: '100%',
+          maxWidth: '100%',
           ':hover': {
             transform: 'translateY(-4px)'
           }
@@ -95,10 +97,11 @@ const Home: React.FC = () => {
         </Card>
 
         <Card className={styles.methodCard} style={{ 
-          borderRadius: '12px',
+          borderRadius: '0',
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
           transition: 'transform 0.2s',
-          width: '280px',
+          width: '100%',
+          maxWidth: '100%',
           ':hover': {
             transform: 'translateY(-4px)'
           }
@@ -136,10 +139,11 @@ const Home: React.FC = () => {
         </Card>
 
         <Card className={styles.methodCard} style={{ 
-          borderRadius: '12px',
+          borderRadius: '0',
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
           transition: 'transform 0.2s',
-          width: '280px',
+          width: '100%',
+          maxWidth: '100%',
           ':hover': {
             transform: 'translateY(-4px)'
           }
