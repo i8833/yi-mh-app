@@ -269,52 +269,57 @@ const TimeDivination: React.FC = () => {
   };
 
   return (
-    <div className={styles.container} style={{ 
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      padding: '1.5rem',
-      backgroundColor: '#f5f5f5'
+    <div style={{ 
+      width: '100vw',
+      height: '100vh',
+      margin: 0,
+      padding: 0,
+      backgroundColor: '#fff',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      overflowY: 'auto',
+      zIndex: 1000
     }}>
-      {/* 优化头部 */}
-      <div className={styles.header} style={{ 
-        textAlign: 'center',
-        marginBottom: '2rem',
-        padding: '2rem',
-        backgroundColor: '#fff',
-        borderRadius: '12px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      <Card style={{ 
         width: '100%',
-        maxWidth: '600px'
+        minHeight: '100%',
+        margin: 0,
+        padding: '0.5rem',
+        border: 'none',
+        borderRadius: 0,
+        boxShadow: 'none'
       }}>
-        
-        <Title level={2} style={{ 
-          fontSize: '1.8rem',
-          marginBottom: '0.5rem',
-          color: '#1890ff'
+        <div className={styles.header} style={{
+          position: 'sticky',
+          top: 0,
+          backgroundColor: '#fff',
+          zIndex: 10,
+          padding: '1rem 0',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderBottom: '1px solid #f0f0f0'
         }}>
-          时间起卦
-        </Title>   
+          <Title level={2} style={{
+            margin: 0,
+            fontSize: '1.2rem',
+            lineHeight: '1.5',
+            padding: 0
+          }}>时间起卦</Title>
+        </div>
 
-        
-
-      </div>
-
-      {/* 优化内容容器 */}
-      <div style={{ 
-        flex: 1,
-        width: '100%',
-        maxWidth: '600px',
-        marginBottom: '2rem'
-      }}>
-        <Card style={{ 
-          borderRadius: '12px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          padding: '1.5rem'
+        <Space direction="vertical" size="large" style={{
+          width: '100%',
+          padding: '0.5rem',
+          marginTop: '1rem'
         }}>
           {/* 时间信息区域 */}
-          <div className={styles.timeInfo}>
+          <div style={{
+            background: '#f5f5f5',
+            padding: '1rem',
+            borderRadius: '8px'
+          }}>
             <Space direction="vertical" className={styles.timeDetails}>
               <div className={styles.timeRow}>
                 <Text style={{ color: '#666' }}>公历：{currentTime.year}年{currentTime.month}月{currentTime.day}日 {currentTime.hour}时</Text>
@@ -334,7 +339,10 @@ const TimeDivination: React.FC = () => {
           </div>
 
           {/* 所问之事输入区域 */}
-          <div className={styles.questionSection}>
+          <div style={{
+            width: '100%',
+            padding: '0 0.5rem'
+          }}>
             <Text strong>所问之事（选填）：</Text>
             <Input.TextArea 
               rows={4}
@@ -344,87 +352,80 @@ const TimeDivination: React.FC = () => {
               className={styles.textarea}
             />
           </div>
-          
+
           <Button 
             type="primary" 
             size="large" 
             onClick={handleDivination}
             loading={loading}
-            style={{ 
+            style={{
               width: '100%',
-              height: '48px',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              marginBottom: '2rem'  // 增加下边距，与保存记录按钮分开
+              height: '44px',
+              margin: '1rem 0'
             }}
           >
             {loading ? '占卜中...' : '立即起卦'}
           </Button>
 
           {result && (
-            <div className={styles.resultSection}>
-              <DivinationResult 
-                result={result}
-                analysis={analysis}
-                onSymbolClick={handleSymbolClick}
-              />
-            </div>
+            <>
+              <div style={{
+                width: '100%',
+                padding: '0 0.5rem'
+              }}>
+                <DivinationResult 
+                  result={result}
+                  analysis={analysis}
+                  onSymbolClick={handleSymbolClick}
+                />
+              </div>
+
+              <div style={{
+                width: '100%',
+                padding: '0 0.5rem'
+              }}>
+                <Text strong>断语、分析（选填）：</Text>
+                <Input.TextArea 
+                  rows={4}
+                  value={analysis}
+                  onChange={(e) => setAnalysis(e.target.value)}
+                  placeholder="可以输入您对卦象的分析..."
+                  className={styles.textarea}
+                />
+              </div>
+
+              <Button
+                type="primary"
+                icon={<SaveOutlined />}
+                onClick={handleSave}
+                style={{
+                  width: '100%',
+                  height: '44px',
+                  margin: '1rem 0'
+                }}
+              >
+                保存记录
+              </Button>
+            </>
           )}
 
-          {result && (
-            <div className={styles.analysisSection}>
-              <Text strong>断语、分析（选填）：</Text>
-              <Input.TextArea 
-                rows={4}
-                value={analysis}
-                onChange={(e) => setAnalysis(e.target.value)}
-                placeholder="可以输入您对卦象的分析..."
-                className={styles.textarea}
-              />
-            </div>
-          )}
-
-          {/* 保存按钮 */}
-          <Button
-            type="primary"
-            icon={<SaveOutlined />}
-            onClick={handleSave}
-            style={{ 
+          <Button 
+            type="link" 
+            icon={<LeftOutlined />} 
+            onClick={() => navigate('/')}
+            style={{
               width: '100%',
-              height: '48px',
-              borderRadius: '8px',
-              fontSize: '1rem'
+              height: '44px',
+              color: '#666',
+              marginTop: '1rem',
+              marginBottom: '2rem'
             }}
           >
-            保存记录
+            返回首页
           </Button>
-        </Card>
+        </Space>
+      </Card>
 
-        <Button 
-          type="link" 
-          icon={<LeftOutlined style={{ color: '#666' }} />} 
-          onClick={() => navigate('/')}
-        >
-          返回首页
-        </Button>
-        
-      </div>
-
-      {/* 优化页脚 */}
-      <div style={{ 
-        textAlign: 'left',
-        marginTop: '0rem',
-        padding: '1rem',
-        color: '#666',
-        fontSize: '0.9rem',
-        width: '100%',
-        maxWidth: '600px'
-      }}>
-        
-        
-      </div>
-
-      {/* 添加模态框组件 */}
       <SymbolModal 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
