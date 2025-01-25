@@ -131,21 +131,28 @@ const CustomDivination: React.FC = () => {
       width: '100%',
       maxWidth: '100%',
       padding: '0',
+      margin: '0 auto',
+      backgroundColor: '#fff'
     }}>
       <Card style={{ 
         borderRadius: '0',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+        boxShadow: 'none',
         width: '100%',
         maxWidth: '100%',
-        marginBottom: '0.5rem'
+        marginBottom: '0.5rem',
+        padding: '0.5rem',
       }}>
         <div className={styles.header}>
-          
-          <Title level={2} className={styles.title}>自选起卦</Title>
-          
+          <Title level={2} className={styles.title} style={{
+            marginTop: '0.5rem',
+            marginBottom: '1rem'
+          }}>自选起卦</Title>
         </div>
 
-        <Space direction="vertical" size="large" className={styles.content}>
+        <Space direction="vertical" size="large" className={styles.content} style={{
+          width: '100%',
+          padding: '0 0.5rem'
+        }}>
           {/* 卦象选择区域 */}
           <div className={styles.selectGroup}>
             <div className={styles.selectItem}>
@@ -263,14 +270,15 @@ const CustomDivination: React.FC = () => {
       </Card>
 
       <Button 
-          type="link" 
-          icon={<LeftOutlined style={{ color: '#666' }} />} 
-          onClick={() => navigate('/')}
-          
-        >
-          返回首页
-        </Button>
-        
+        type="link" 
+        icon={<LeftOutlined style={{ color: '#666' }} />} 
+        onClick={() => navigate('/')}
+        style={{
+          marginLeft: '0.5rem'
+        }}
+      >
+        返回首页
+      </Button>
     </div>
   );
 };
