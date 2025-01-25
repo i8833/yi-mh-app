@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Typography, Input, InputNumber, message, Card } from 'antd';
+import { Button, Typography, Input, InputNumber, message, Card, Space } from 'antd';
 import { LeftOutlined, SaveOutlined, HistoryOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { calculateThreeNumberDivination } from '../../../utils/threeNumberDivinationUtils';
@@ -120,113 +120,179 @@ const ThreeNumberDivination: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <Title level={2} className={styles.title}>三数起卦</Title>
-      </div>
+    <div style={{ 
+      width: '100vw',
+      height: '100vh',
+      margin: 0,
+      padding: 0,
+      backgroundColor: '#fff',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      overflowY: 'auto',
+      zIndex: 1000
+    }}>
+      <Card style={{ 
+        width: '100%',
+        minHeight: '100%',
+        margin: 0,
+        padding: '0.5rem',
+        border: 'none',
+        borderRadius: 0,
+        boxShadow: 'none'
+      }}>
+        <div className={styles.header} style={{
+          position: 'sticky',
+          top: 0,
+          backgroundColor: '#fff',
+          zIndex: 10,
+          padding: '1rem 0',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderBottom: '1px solid #f0f0f0'
+        }}>
+          <Title level={2} style={{
+            margin: 0,
+            fontSize: '1.2rem',
+            lineHeight: '1.5',
+            padding: 0
+          }}>三数起卦</Title>
+        </div>
 
-      <Card className={styles.card}>
-        <div className={styles.inputSection}>
-          <div className={styles.inputGrid}>
-            <div className={styles.inputItem}>
-              <Text className={styles.label}>第一个数字</Text>
-              <InputNumber
-                min={1}
-                max={999}
-                value={numbers.num1}
-                onChange={(value) => handleNumberChange('num1', value)}
-                className={styles.input}
-                placeholder="请输入"
-              />
-            </div>
-            <div className={styles.inputItem}>
-              <Text className={styles.label}>第二个数字</Text>
-              <InputNumber
-                min={1}
-                max={999}
-                value={numbers.num2}
-                onChange={(value) => handleNumberChange('num2', value)}
-                className={styles.input}
-                placeholder="请输入"
-              />
-            </div>
-            <div className={styles.inputItem}>
-              <Text className={styles.label}>第三个数字</Text>
-              <InputNumber
-                min={1}
-                max={999}
-                value={numbers.num3}
-                onChange={(value) => handleNumberChange('num3', value)}
-                className={styles.input}
-                placeholder="请输入"
-              />
+        <Space direction="vertical" size="large" style={{
+          width: '100%',
+          padding: '0.5rem',
+          marginTop: '1rem'
+        }}>
+          <div style={{
+            background: '#f5f5f5',
+            padding: '1rem',
+            borderRadius: '8px'
+          }}>
+            <div className={styles.inputGrid}>
+              <div className={styles.inputItem}>
+                <Text className={styles.label}>第一个数字</Text>
+                <InputNumber
+                  min={1}
+                  max={999}
+                  value={numbers.num1}
+                  onChange={(value) => handleNumberChange('num1', value)}
+                  className={styles.input}
+                  placeholder="请输入"
+                />
+              </div>
+              <div className={styles.inputItem}>
+                <Text className={styles.label}>第二个数字</Text>
+                <InputNumber
+                  min={1}
+                  max={999}
+                  value={numbers.num2}
+                  onChange={(value) => handleNumberChange('num2', value)}
+                  className={styles.input}
+                  placeholder="请输入"
+                />
+              </div>
+              <div className={styles.inputItem}>
+                <Text className={styles.label}>第三个数字</Text>
+                <InputNumber
+                  min={1}
+                  max={999}
+                  value={numbers.num3}
+                  onChange={(value) => handleNumberChange('num3', value)}
+                  className={styles.input}
+                  placeholder="请输入"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className={styles.section}>
-          <Text strong className={styles.sectionTitle}>所问之事（选填）</Text>
-          <Input.TextArea 
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            placeholder="请输入您想问卜的事情..."
-            className={styles.textarea}
-            rows={4}
-          />
-        </div>
-        
-        <Button 
-          type="primary" 
-          onClick={handleDivination}
-          loading={loading}
-          className={styles.button}
-        >
-          {loading ? '占卦中...' : '立即起卦'}
-        </Button>
+          <div style={{
+            width: '100%',
+            padding: '0 0.5rem'
+          }}>
+            <Text strong>所问之事（选填）：</Text>
+            <Input.TextArea 
+              rows={4}
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              placeholder="可以输入您想问卜的事情..."
+              className={styles.textarea}
+            />
+          </div>
+          
+          <Button 
+            type="primary" 
+            size="large" 
+            onClick={handleDivination}
+            loading={loading}
+            style={{
+              width: '100%',
+              height: '44px',
+              margin: '1rem 0'
+            }}
+          >
+            {loading ? '占卜中...' : '立即起卦'}
+          </Button>
 
-        {result && (
-          <>
-            <div className={styles.resultSection}>
-              <DivinationResultComponent 
-                result={result}
-                analysis={analysis}
-                onSymbolClick={handleSymbolClick}
-              />
-            </div>
+          {result && (
+            <>
+              <div style={{
+                width: '100%',
+                padding: '0 0.5rem'
+              }}>
+                <DivinationResultComponent 
+                  result={result}
+                  analysis={analysis}
+                  onSymbolClick={handleSymbolClick}
+                />
+              </div>
 
-            <div className={styles.section}>
-              <Text strong className={styles.sectionTitle}>断语、分析（选填）</Text>
-              <Input.TextArea 
-                value={analysis}
-                onChange={(e) => setAnalysis(e.target.value)}
-                placeholder="请输入您对卦象的分析..."
-                className={styles.textarea}
-                rows={4}
-              />
-            </div>
+              <div style={{
+                width: '100%',
+                padding: '0 0.5rem'
+              }}>
+                <Text strong>断语、分析（选填）：</Text>
+                <Input.TextArea 
+                  rows={4}
+                  value={analysis}
+                  onChange={(e) => setAnalysis(e.target.value)}
+                  placeholder="可以输入您对卦象的分析..."
+                  className={styles.textarea}
+                />
+              </div>
 
-            <Button
-              type="primary"
-              icon={<SaveOutlined />}
-              onClick={handleSave}
-              className={styles.button}
-            >
-              保存记录
-            </Button>
-          </>
-        )}
+              <Button
+                type="primary"
+                icon={<SaveOutlined />}
+                onClick={handleSave}
+                style={{
+                  width: '100%',
+                  height: '44px',
+                  margin: '1rem 0'
+                }}
+              >
+                保存记录
+              </Button>
+            </>
+          )}
+
+          <Button 
+            type="link" 
+            icon={<LeftOutlined />} 
+            onClick={() => navigate('/')}
+            style={{
+              width: '100%',
+              height: '44px',
+              color: '#666',
+              marginTop: '1rem',
+              marginBottom: '2rem'
+            }}
+          >
+            返回首页
+          </Button>
+        </Space>
       </Card>
-
-      <div className={styles.footerActions}>
-        <Button 
-          type="link" 
-          icon={<LeftOutlined />}
-          onClick={() => navigate('/')}
-          className={styles.backButton}
-        >
-          返回首页
-        </Button>
-      </div>
 
       <SymbolModal 
         isOpen={isModalOpen}
