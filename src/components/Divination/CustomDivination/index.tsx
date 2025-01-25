@@ -153,25 +153,17 @@ const CustomDivination: React.FC = () => {
           top: 0,
           backgroundColor: '#fff',
           zIndex: 10,
-          padding: '0.5rem 0'
+          padding: '1rem 0',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderBottom: '1px solid #f0f0f0'
         }}>
-          <Button 
-            type="link" 
-            icon={<LeftOutlined />} 
-            onClick={() => navigate('/')}
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: '50%',
-              transform: 'translateY(-50%)'
-            }}
-          >
-            返回
-          </Button>
           <Title level={2} style={{
             margin: 0,
             fontSize: '1.2rem',
-            textAlign: 'center'
+            lineHeight: '1.5',
+            padding: 0
           }}>自选起卦</Title>
         </div>
 
@@ -306,6 +298,22 @@ const CustomDivination: React.FC = () => {
             }}
           >
             保存记录
+          </Button>
+
+          {/* 添加返回按钮到底部 */}
+          <Button 
+            type="link" 
+            icon={<LeftOutlined />} 
+            onClick={() => navigate('/')}
+            style={{
+              width: '100%',
+              height: '44px',
+              color: '#666',
+              marginTop: '1rem',
+              marginBottom: '2rem' // 增加底部间距
+            }}
+          >
+            返回首页
           </Button>
         </Space>
       </Card>
